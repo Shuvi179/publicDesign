@@ -1,0 +1,106 @@
+.user {
+  &-page {
+    font-family: $CommissionerMedium;
+    padding: 20px 0 100px;
+    .wr {
+      max-width: 875px;
+    }
+  }
+
+  &-title {
+    font-family: $CommissionerMedium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 42px;
+    color: #1C1C1E;
+    margin-bottom: 20px;
+  }
+
+  &-info {
+
+    &-row {
+      font-size: 16px;
+      line-height: 19px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 36px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-item {
+      width: 27%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-top: 14px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 18px;
+      line-height: 21px;
+      width: 31%;
+      font-family: $CommissionerRegular;
+    }
+
+    &-btn {
+      cursor: pointer;
+      font-family: $CommissionerMedium;
+      font-size: 18px;
+      line-height: 21px;
+      display: table;
+      margin-left: auto;
+    }
+  }
+
+  &-form {
+    max-width: 630px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    &-title {
+      font-size: 18px;
+      max-width: calc(100% - 305px);
+      line-height: 22px;
+      font-family: $CommissionerRegular;
+    }
+
+    &-fields {
+      width: 305px;
+    }
+
+    .text-field,
+    &-row {
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &-error-message {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    &-bottom {
+      width: 100%;
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

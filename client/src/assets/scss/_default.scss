@@ -1,0 +1,137 @@
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-size: 14px;
+  font-family: $Raleway;
+  line-height: 1.25;
+  font-weight: 400;
+  color: $color-text;
+  height: 100%;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #8A8A8E;
+    border-radius: 20px;
+  }
+}
+
+.wr {
+  width: 100%;
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.fade-in {
+  animation: fadein .3s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+// pagination 
+.pagination {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 90px;
+  
+  .active {
+    a {
+      background: #C4C4C4;
+    }
+  }
+
+  li {
+    margin: 4px;
+    &.previous {
+      margin-right: 8px;
+    }
+    &.next {
+      margin-left: 8px;
+    }
+  }
+
+  a {
+    display: block;
+    min-width: 35px;
+    height: 35px;
+    background: #F3F3F9;
+    border-radius: 6px;
+    line-height: 35px;
+    padding: 0 2px;
+    text-align: center;
+    font-family: $CommissionerBold;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      background: #C4C4C4;
+    }
+    &:not([aria-label]) {
+      &::after {
+        content: "...";
+      }
+    }
+  }
+}
+
+.link {
+  position: relative;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #8A8A8E;
+  padding-left: 25px;
+  display: inline-block;
+
+  &-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    img,
+    svg {
+      display: block;
+    }
+  }
+}
+
+.page-full {
+  min-height: calc(100vh - 102px);
+}
+
+.fadeIn {
+  animation: fadein 0.3s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.app-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.text-message {
+  font-family: $CommissionerMedium;
+  font-size: 16px;
+  color: #8A8A8E;
+  text-align: center;
+  width: 100%;
+}

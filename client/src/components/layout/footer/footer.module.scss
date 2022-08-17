@@ -1,0 +1,16 @@
+@import "../../../assets/scss/variables";
+.footer {
+  background: $gray-light;
+  padding: 28px 0;
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+
+  p {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

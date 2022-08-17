@@ -1,0 +1,84 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixin";
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  height: 100vh;
+  width: 100%;
+  background: rgba(#1B1B37, .08);
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #8A8A8E;
+    border-radius: 20px;
+  }
+
+  &-bg-close {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  &-wr {
+    width: 100%;
+    max-width: 590px;
+    margin: 0 auto;
+    height: 100vh;
+    display: table;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &-content {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  &-inner {
+    background: #fff;
+    box-shadow: 0px 50px 100px rgba(#000, 0.07);
+    border-radius: 25px;
+    padding: 48px 60px 55px;
+    position: relative;
+  }
+
+  &-btn-close {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    right: 32px;
+    top: 32px;
+
+    &:before,
+    &:after {
+      @include content;
+      background: $gray;
+      width: 2px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      margin-left: -1px;
+    }
+
+    &:after {
+      transform: rotate(45deg);
+    }
+
+    &:before {
+      transform: rotate(-45deg);
+    }
+  }
+}

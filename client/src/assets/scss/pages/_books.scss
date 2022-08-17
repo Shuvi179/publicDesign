@@ -1,0 +1,101 @@
+.books {
+  padding-bottom: 110px;
+
+  &-list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  &-item {
+    width: 25%;
+    padding: 10px;
+  }
+
+  &-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 70px;
+
+    &-left {
+      width: 210px;
+    }
+
+    &-right {
+      display: flex;
+      align-items: flex-start;
+      width: calc(100% - 270px);
+    }
+  }
+
+  &-info {
+    width: 100%;
+  }
+
+  &-info,
+  &-info-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-info-end {
+    justify-content: flex-end;
+  }
+
+  &-info-btn {
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    border: none;
+    display: block;
+    font-family: $CommissionerMedium;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #8A8A8E;
+    margin: 14px 35px 14px 0;
+    &.active {
+      color: #1C1C1E;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-info-btn-icon {
+    color: #1C1C1E;
+    display: flex;
+    align-items: center;
+
+    span {
+      display: block;
+      margin-right: 15px;
+    }
+
+    svg {
+      display: block;
+    }
+  }
+
+  &-info-number {
+    padding-left: 10px;
+  }
+
+  &-popup-message {
+    .popup-wr {
+      max-width: 455px;
+    }
+  }
+
+  &-popup-delete {
+    .popup-wr {
+      max-width: 660px;
+    }
+    .message-popup-text {
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../assets/scss/variables";
+
+.books-menu {
+  width: 155px;
+
+  &-item {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-link {
+    font-size: 16px;
+    line-height: 20px;
+    color: #1C1C1E;
+    display: block;
+    padding-left: 20px;
+    position: relative;
+    padding: 14px 25px 14px 46px;
+    border-radius: 8px;
+    &.active {
+      font-family: $CommissionerMedium;
+      background: #F3F3F3;
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    svg {
+      display: block;
+    }
+  }
+}

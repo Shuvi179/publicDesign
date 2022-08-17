@@ -1,0 +1,196 @@
+@import "../../assets/scss/variables";
+.book-comment {
+  margin-top: 45px;
+
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 31px;
+  }
+
+  &-title {
+    font-family: $RalewaySemiBold;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  &-subtitle {
+    font-family: $RalewaySemiBold;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 12px;
+    margin-top: 6px;
+  }
+
+  .book-button-arrow,
+  &-btn {
+    font-size: 16px;
+    line-height: 19px;
+    font-size: 16px;
+    margin-top: 0;
+    &::after {
+      top: 4px;
+    }
+    &.active {
+      &::after {
+        top: 8px;
+      }
+    }
+  }
+
+  &-block {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &-img {
+    width: 50px;
+    height: 50px;
+    background: #C4C4C4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+  }
+
+  &-inner {
+    width: calc(100% - 50px);
+    padding-left: 25px;
+  }
+
+  &-info {
+    padding-top: 3px;
+    padding-bottom: 8px;
+  }
+
+  &-block {
+    margin-bottom: 22px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-info,
+  &-rating {
+    display: flex;
+    align-items: center;
+  }
+
+  &-rating-item {
+    margin: 2px;
+    svg {
+      display: block;
+    }
+  }
+
+  &-name {
+    font-family: $RalewaySemiBold;
+    font-size: 16px;
+    line-height: 19px;
+    padding-right: 15px;
+  }
+
+  &-date {
+    margin-left: auto;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: $CommissionerRegular;
+  }
+
+  &-text {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $CommissionerRegular;
+  }
+
+  &-set-rating {
+    overflow: hidden;
+    input {
+      display: none;
+      &:checked ~ label {
+        color: #1C1C1E;
+      }
+      &:checked + label:hover,
+      &:checked + label:hover ~ label,
+      &:checked ~ label:hover,
+      &:checked ~ label:hover ~ label,
+      &:hover ~ input:checked ~ label {
+        color: #1C1C1E;
+      }
+    }
+    label {
+      float: right;
+      width: 20px;
+      padding: 0;
+      cursor: pointer;
+      font-size: 16px;
+      line-height: 16px;
+      color: #f3f3f9;
+      text-shadow: 0 0 #8A8A8E;
+      &::before {
+        content: '★';
+        display: block;
+      }
+      &:hover,
+      &:hover ~ label {
+        color: #1C1C1E;
+      }
+    }
+  }
+
+  &-form {
+    margin-bottom: 35px;
+
+    .book-comment-block {
+      margin-bottom: 16px;
+    }
+
+    &-title {
+      font-family: $RalewaySemiBold;
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 12px;
+    }
+
+    &-btn {
+      font-family: $RalewaySemiBold;
+      font-size: 16px;
+      line-height: 19px;
+      text-decoration-line: underline;
+      color: #8A8A8E;
+      display: table;
+      margin-left: auto;
+      cursor: pointer;
+    }
+
+    &-message {
+      display: block;
+      border: none;
+      width: 100%;
+      background: #F3F3F9;
+      border-radius: 13px;
+      padding: 18px 40px 18px 27px;
+      font-family: $CommissionerRegular;
+      font-size: 16px;
+      line-height: 20px;
+      color: #1C1C1E;
+      height: 136px;
+      resize: none;
+    }
+  }
+
+  &-btn-more {
+    display: table;
+    margin: 20px auto 0;
+    font-family: $RalewaySemiBold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #8A8A8E;
+    font-size: 16px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+}

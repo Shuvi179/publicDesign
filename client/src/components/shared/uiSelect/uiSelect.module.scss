@@ -1,0 +1,236 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixin";
+.ui-select {
+  color: #000;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 180px;
+  font-size: 16px;
+  font-family: $CommissionerRegular;
+  line-height: 20px;
+  &--toggle-label:not(.ui-select-default--toggle-label),
+  &--toggle-name { 
+    border: 1px solid #C5C5C7;
+    border-radius: 8px;
+    padding: 14px 45px 14px 25px;
+    font-family: $CommissionerMedium;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    transition: all .3s;
+    color: #3E3E44;
+    &:hover {
+      .ui-select--tooltip {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &--toggle-label:not(.ui-select-default--toggle-label),
+  &--toggle-name span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+  }
+  &-default--toggle-name,
+  &--toggle-label:not(.ui-select-default--toggle-label) {
+    border-color: transparent;
+    cursor: pointer;
+    &:after {
+      @include content;
+      top: 50%;
+      transition: all .3s;
+      right: 18px;
+      margin-top: -4px;
+      width: 8px;
+      height: 8px;
+      border-bottom: 2px solid #3E3E44;
+      border-right: 2px solid #3E3E44;
+      transform: rotate(45deg);
+    }
+  }
+  &--toggle-close {
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -7px;
+    &::after,
+    &::before {
+      @include content;
+      width: 2px;
+      height: 12px;
+      background: #1C1C1E;
+      top: 50%;
+      left: 50%;
+      margin-left: -1px;
+      margin-top: -5px;
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+  &--toggle-arr-wr {
+    width: 8px;
+    margin-left: 12px;
+  }
+  &--inner {
+    background: #FFFFFF;
+    border: 1px solid #C5C5C7;
+    box-sizing: border-box;
+    box-shadow: 0px 11px 20px rgba(20, 20, 20, 0.05);
+    border-radius: 11px;
+    width: 290px;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 65px;
+    max-height: 290px;
+    padding: 30px 34px;
+  }
+  &--inner-content {
+    overflow: auto;
+    max-height: 230px;
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #C4C4C4;
+      border-radius: 38px;
+    }
+  }
+  &--item {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.is-active {
+      font-family: $CommissionerMedium;
+    }
+  }
+  &--multi-item {
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding-left: 34px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:before {
+      @include content;
+      background-color: transparent;
+      border: 1px solid #1C1C1E;
+      width: 14px;
+      height: 14px;
+      left: 0;
+      top: 3px;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+    &.is-active {
+      &:after {
+        @include content;
+        top: 50%;
+        transition: all .3s;
+        margin-top: -3px;
+        left: 5px;
+        width: 4px;
+        height: 4px;
+        border-bottom: 1px solid #3E3E44;
+        border-right: 1px solid #3E3E44;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &.is-open {
+    .ui-select--inner { 
+      opacity: 1;
+      visibility: visible;
+    }
+    .ui-select--toggle-name {
+      opacity: 0;
+    }
+    .ui-select-default--toggle-name,
+    .ui-select--toggle-label {
+      border-color: #C5C5C7;
+      &:after {
+        margin-top: -1px;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  &-default {
+    width: 100%;
+    .ui-select--toggle-label {
+      margin-bottom: 8px;
+    }
+    .ui-select--toggle-name:not(.ui-select-default--toggle-name) {
+      opacity: 1 !important;
+      margin: 7px 15px 7px 0;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .ui-select--inner { 
+      width: 100%;
+      top: 88px;
+    }
+  }
+  &-default--toggle-name {
+    margin: 0 0 7px;
+    opacity: 1 !important;
+    border-color: #C5C5C7 !important;
+    color: #B9B9C1;
+    font-family: $CommissionerRegular;
+  }
+
+  &-error {
+    .ui-select--toggle-name {
+      border-color: #da1c1c !important;
+    }
+  }
+  &-error-text {
+    font-size: 12px;
+    color: #da1c1c;
+    padding-top: 5px;
+  }
+  &--tooltip {
+    position: absolute;
+    background: #C4C4C4;
+    border-radius: 6px;
+    max-width: 100%;
+    padding: 11px 17px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+    font-family: $CommissionerRegular;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    top: 100%;
+    left: 0;
+    max-width: 320px;
+    margin-top: 10px;
+  }
+}

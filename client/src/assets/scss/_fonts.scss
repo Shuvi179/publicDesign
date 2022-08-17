@@ -1,0 +1,18 @@
+@mixin fontFace($FontName, $FontPathName, $weight) {
+  @font-face {
+      font-family: '#{$FontName}';
+      src: url('../fonts/#{$FontPathName}.woff') format('woff'),
+      url('../fonts/#{$FontPathName}.ttf') format('truetype');
+      font-weight: $weight;
+      font-style: normal;
+      font-display: swap;
+  }
+}
+
+@include fontFace('Raleway-Bold', 'Raleway-Bold', 700);
+@include fontFace('Raleway-SemiBold', 'Raleway-SemiBold', 600);
+@include fontFace('Raleway-Regular', 'Raleway-Regular', 400);
+
+@include fontFace('Commissioner-Bold', 'Commissioner-Bold', 700);
+@include fontFace('Commissioner-Medium', 'Commissioner-Medium', 500);
+@include fontFace('Commissioner-Regular', 'Commissioner-Regular', 400);

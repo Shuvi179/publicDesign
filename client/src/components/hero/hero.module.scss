@@ -1,0 +1,31 @@
+@import "../../assets/scss/variables";
+.hero {
+  background: $gray;
+  display: table;
+  width: 100%;
+  height: calc(100vh - 100px);
+
+  &-wr {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 50px 0;
+  }
+
+  &-title {
+    font-family: $RalewayBold;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 22px;
+    font-size: 64px;
+    line-height: 1.2;
+  }
+
+  &-text {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+}

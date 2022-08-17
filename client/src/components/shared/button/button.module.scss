@@ -1,0 +1,102 @@
+@import "../../../assets/scss/variables";
+.button {
+  font-family: $RalewaySemiBold;
+  min-width: 170px;
+  color: $color-text;
+  display: inline-block;
+  vertical-align: top;
+  padding: 18px;
+  font-size: 16px;
+  line-height: 1.25;
+  border-radius: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s;
+  font-weight: 600;
+  position: relative;
+
+  &[disabled] {
+    opacity: 0.6;
+  }
+
+  &-gray {
+    background: $gray-dark;
+    &:hover {
+      background: lighten($gray-dark, 10);
+    }
+  }
+
+  &-white {
+    background: $gray-light;
+    &:hover {
+      background: darken($gray-light, 10);
+    }
+  }
+
+  &-border {
+    background: #fff;
+    border: 1px solid #1C1C1E;
+    padding: 17px 31px;
+    &:hover {
+      border-color: #d1d1e8;
+    }
+    .button-spinner {
+      background: #1C1C1E;
+      color: #1C1C1E;
+      &:before,
+      &:after {
+        background: #1C1C1E;
+      }
+    }
+  }
+
+  &.link {
+    min-width: 1px;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  &-spinner {
+    background: #fff;
+    animation: load 1s infinite ease-in-out;
+    width: 1em;
+    height: 4em;
+    color: #fff;
+    text-indent: -9999em;
+    font-size: 5px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation-delay: -0.16s;
+    top: 50%;
+    left: 50%;
+    &:before,
+    &:after {
+      background: #fff;
+      animation: load 1s infinite ease-in-out;
+      width: 1em;
+      height: 4em;
+      position: absolute;
+      top: 0;
+      content: '';
+    }
+    &:before {
+      left: -2em;
+      animation-delay: -0.32s;
+    }
+    &:after {
+      left: 2em;
+    }
+    @keyframes load {
+      0%,
+      80%,
+      100% {
+        box-shadow: 0 0;
+        height: 4em;
+      }
+      40% {
+        box-shadow: 0 -2em;
+        height: 5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import "../../assets/scss/variables";
+.book-info {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $CommissionerRegular;
+
+  p {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h5 {
+    margin-bottom: 20px;
+    font-family: $CommissionerMedium;
+  }
+
+  a,
+  a:link {
+    text-decoration: underline;
+  }
+
+  &-left {
+    width: 40%;
+    max-width: 305px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &-right {
+    width: 55%;
+    max-width: 490px;
+  }
+
+  &-row {
+    margin-bottom: 25px;
+    width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-form {
+    width: 100%;
+  }
+
+  &-item {
+    & + .book-info-item {
+      margin-top: 50px;
+    }
+  }
+
+  &-btn {
+    color: #8A8A8E;
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+    text-decoration-line: underline;
+    font-family: $RalewaySemiBold;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  :global(.text-field-label),
+  :global(.ui-select--toggle-label) {
+    font-family: $CommissionerMedium;
+  }
+
+  &-buttons {
+    margin-top: auto;
+    padding-top: 20px;
+    width: calc(100% + 320px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -320px;
+  }
+}

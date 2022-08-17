@@ -1,0 +1,43 @@
+@import "../../assets/scss/variables";
+
+.books-filter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+
+  :global(.ui-select) {
+    margin-left: 90px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+
+  &-label {
+    padding: 15px 25px;
+    font-family: $CommissionerMedium;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3E3E44;
+    min-width: 152px;
+  }
+
+  &-btn {
+    border: 1px solid #D5D5DE;
+    border-radius: 8px;
+    padding: 14px 25px;
+    font-family: $CommissionerMedium;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: all .3s;
+    color: #3E3E44;
+    cursor: pointer;
+  }
+}

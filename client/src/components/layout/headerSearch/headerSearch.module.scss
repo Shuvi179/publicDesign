@@ -1,0 +1,88 @@
+@import "../../../assets/scss/variables";
+.header-search {
+  position: relative;
+
+  &-btn {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 35px;
+    top: 18px;
+
+    svg {
+      display: block;
+    }
+  }
+  
+  &-input {
+    background: #fff;
+    border-radius: 100px;
+    font-family: $RalewaySemiBold;
+    font-size: 16px;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    padding: 17px 35px 17px 75px;
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  &-resaults {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 100%;
+    position: absolute;
+    width: 415px;
+    max-height: 70vh;
+    overflow: auto;
+    background: #FFFFFF;
+    border: 1px solid #E4E4EC;
+    border-radius: 10px;
+    margin-top: 6px;
+    
+    :global(.loader) {
+      width: 50px;
+      height: 50px;
+    }
+    :global(.loader-spinner) {
+      font-size: 5px;
+    }
+  }
+  &-resaults-block {
+    display: block;
+    padding: 13px 35px 19px;
+    transition: all .3s;
+    border-bottom: 1px solid #E4E4EC;
+    &:hover {
+      background: lighten($gray-dark, 10);
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &-resaults-text {
+    font-family: $CommissionerMedium;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 13px 35px 19px;
+  }
+  &-resaults-book-name {
+    display: block;
+    font-family: $CommissionerMedium;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &-resaults-author {
+    display: block;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 8px;
+  }
+}

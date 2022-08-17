@@ -1,0 +1,128 @@
+.form {
+
+  &-title {
+    font-family: $RalewayBold;
+    font-size: 26px;
+    margin-bottom: 17px;
+    text-align: center;
+  }
+
+  &-text {
+    font-size: 14px;
+    font-family: $RalewaySemiBold;
+    color: $gray-dark;
+    margin-bottom: 30px;
+    text-align: center;
+    button {
+      cursor: pointer;
+      color: inherit;
+    }
+  }
+
+  &-row {
+    margin-bottom: 22px;
+    position: relative;
+  }
+
+  &-field-ico {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &-line {
+    font-family: $RalewaySemiBold;
+    color: #B9B9C1;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    margin: 25px 0;
+
+    &::after {
+      @include content;
+      left: -60px;
+      right: -60px;
+      top: 50%;
+      height: 1px;
+      background: rgba(185, 185, 193, 0.55);
+      z-index: 0;
+    }
+
+    &-text {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      padding: 0 30px;
+      background: #fff;
+    }
+  }
+
+  &-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 16px;
+    &.gray {
+      padding: 19px;
+      font-family: $RalewayBold;
+    }
+  }
+  &-bottom {
+    margin-top: 30px;
+  }
+  &-error-message {
+    color: #da1c1c;
+  }
+}
+
+.popup-inner {
+  .form {
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.popup-donat {
+
+  .popup-wr {
+    max-width: 630px
+  }
+
+  .form {
+    max-width: 450px;
+  }
+
+  .form-bottom,
+  .form-row {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-row {
+    max-width: 336px;
+  }
+
+  .form-bottom {
+    max-width: 358px;
+  }
+  
+  .form-text {
+    font-size: 16px;
+    line-height: 19px;
+    color: #1C1C1E;
+  }
+  .text-field {
+    span {
+      font-size: 12px;
+      padding-top: 2px;
+    }
+  }
+}

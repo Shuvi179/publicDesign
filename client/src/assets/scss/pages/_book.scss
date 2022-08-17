@@ -1,0 +1,186 @@
+.book {
+
+  &-page {
+    padding: 20px 0 80px;
+
+    .wr {
+      max-width: 1085px;
+      position: relative;
+    }
+
+    &-title {
+      font-family: $CommissionerMedium;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 42px;
+      color: #1C1C1E;
+      margin-bottom: 38px;
+    }
+  }
+
+  &-page-edit {
+    max-width: 870px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &-btn-back {
+    background: transparent;
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    outline: none;
+    width: 24px;
+    height: 24px;
+    top: 5px;
+    left: -100px;
+
+    &::after {
+      @include content;
+      transform: rotate(45deg);
+      width: 16px;
+      height: 16px;
+      border-bottom: 4px solid #8A8A8E;
+      border-left: 4px solid #8A8A8E;
+      left: 9px;
+      top: 4px;
+    }
+  }
+
+  &-info {
+    width: calc(100% - 302px);
+    padding-left: 105px;
+    padding-top: 5px;
+  }
+
+  &-image {
+    width: 302px;
+    height: 254px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      max-height: 100%;
+    }
+  }
+
+  &-title {
+    font-family: $RalewayBold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #1C1C1E;
+    margin-bottom: 16px;
+  }
+
+  &-rating {
+    display: flex;
+    align-items: center;
+    margin: 0 -3px;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: $CommissionerRegular;
+    color: #8A8A8E;
+    strong {
+      font-family: $CommissionerBold;
+      color: #1C1C1E;
+    }
+    &-starts {
+      display: flex;
+      align-items: center;
+    }
+    &-item {
+      padding: 0 3px;
+      svg {
+        display: block;
+      }
+    }
+    &-number {
+      margin-left: 12px;
+    }
+  }
+
+  &-genres,
+  &-author {
+    font-family: $RalewaySemiBold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+    margin-bottom: 16px;
+  }
+
+  &-buttons {
+    margin: 30px -10px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &-button {
+    padding: 17px 20px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    span {
+      display: block;
+      margin-right: 7px;
+      svg {
+        display: block;
+      }
+    }
+  }
+
+  &-content {
+    width: 614px;
+  }
+
+  &-subtitle {
+    font-family: $RalewaySemiBold;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 15px;
+  }
+
+  &-description {
+    margin-top: 36px;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $CommissionerRegular;
+  }
+
+  &-button-arrow {
+    font-family: $RalewaySemiBold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8A8A8E;
+    margin-top: 26px;
+    padding-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+    &::after {
+      @include content;
+      width: 8px;
+      height: 8px;
+      transform: rotate(45deg);
+      border-bottom: 2px solid #8A8A8E;
+      border-right: 2px solid #8A8A8E;
+      right: 0;
+      top: 2px;
+      transition: all .3s;
+    }
+    &.active {
+      &::after {
+        transform: rotate(225deg);
+        right: 0;
+        top: 6px;
+      }
+    }
+  }
+}
